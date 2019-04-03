@@ -1,4 +1,4 @@
-package classwork;
+package groupwork.classwork;
 
 public abstract class Employee {
     private String firstName;

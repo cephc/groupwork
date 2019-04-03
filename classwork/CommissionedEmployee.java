@@ -1,4 +1,4 @@
-package classwork;
+package groupwork.classwork;
 
 public class CommissionedEmployee extends Employee {
     private double commissionRate;

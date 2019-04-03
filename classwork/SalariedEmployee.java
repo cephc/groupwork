@@ -1,4 +1,4 @@
-package classwork;
+package groupwork.classwork;
 
 public class SalariedEmployee extends Employee{
     private double weeklySalary;

@@ -1,4 +1,4 @@
-package classwork;
+package groupwork.classwork;
 
 public class HourlyEmployee extends Employee {
     private String hiredDate;
