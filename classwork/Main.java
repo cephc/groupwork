@@ -1,4 +1,6 @@
-package classwork;
+package groupwork.classwork;
+
+import javax.jws.soap.SOAPBinding;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,10 +19,17 @@ public class Main {
 
         BasePlusCommissionedEmployee oneB = new BasePlusCommissionedEmployee("Malachi", "Dendy", 221984734, .10, 5000.00, 3000.00, "05/13/2013");
         System.out.println(oneB.calculatePay());
+        System.out.println("========================================================");
 
+        Supplier oneU = new Supplier("Dasani", "Rogers", 94747503, 195, 5.85, "12/09/1995");
+        System.out.println(oneU.calculatePay());
+        System.out.println("========================================================");
 
+        IPayable [] iPayables = new IPayable[]{one, oneS, oneC, oneB, oneU};
 
-
+        for (IPayable pay:iPayables){
+            System.out.println(pay.cutCheck());
+        }
 
     }
 }

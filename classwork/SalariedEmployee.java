@@ -1,6 +1,6 @@
-package classwork;
+package groupwork.classwork;
 
-public class SalariedEmployee extends Employee{
+public class SalariedEmployee extends Employee {
     private double weeklySalary;
     private String hiredDate;
     //constructor
@@ -12,6 +12,11 @@ public class SalariedEmployee extends Employee{
         this.weeklySalary = weeklySalary;
     }
     //method
+    public String cutCheck(){
+        double payRate = weeklySalary * 4;
+        double newPayRate = Math.round(payRate*100.00)/100.00;
+        return "Paid SalariedEmployee: " + newPayRate;
+    }
     public String calculatePay(){
         double payRate = weeklySalary * 4;
         double newPayRate = Math.round(payRate*100.00)/100.00;
@@ -31,4 +36,5 @@ public class SalariedEmployee extends Employee{
     public void setHiredDate(String hiredDate) {
         this.hiredDate = hiredDate;
     }
+
 }

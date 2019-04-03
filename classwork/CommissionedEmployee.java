@@ -1,6 +1,6 @@
-package classwork;
+package groupwork.classwork;
 
-public class CommissionedEmployee extends Employee {
+public class CommissionedEmployee extends Employee implements IPayable{
     private double commissionRate;
     private double grossSales;
     private String hiredDate;
@@ -14,6 +14,12 @@ public class CommissionedEmployee extends Employee {
         this.hiredDate = hiredDate;
     }
     //methods
+
+    public String cutCheck(){
+        double payRate = commissionRate * grossSales;
+        double newPayRate = Math.round(payRate*100.00)/100.00;
+        return  "Paid CommissionedEmployee: " + newPayRate;
+    }
     public String calculatePay(){
         double payRate = commissionRate * grossSales;
         double newPayRate = Math.round(payRate*100.00)/100.00;

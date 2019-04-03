@@ -1,35 +1,47 @@
-package classwork;
+package groupwork.classwork;
 
-public class Supplier {
-    private String name;
+public class Supplier extends Employee{
     private int quantity;
     private double price;
-    //constructor
-    public Supplier(){
-    }
-    public Supplier(String name, int quantity, double price){
-        this.name = name;
+    private String hiredDate;
+
+    public Supplier(String firstName, String lastName, int socialSecurity, int quantity, double price, String hiredDate){
+        super(firstName, lastName, socialSecurity);
         this.quantity = quantity;
         this.price = price;
+        this.hiredDate = hiredDate;
     }
-    //getters
-    public String getName() {
-        return name;
+    public Supplier(){
     }
+
+    public String calculatePay() {
+        double x = getQuantity() * getPrice();
+        return "Employee type: Supplier Employee" + "\n" + "First Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Hired Date: " + getHiredDate() + "\n" + "Earned: " + x;
+    }
+
     public int getQuantity() {
         return quantity;
     }
-    public double getPrice() {
-        return price;
-    }
-    //setter
-    public void setName(String name) {
-        this.name = name;
-    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public String getHiredDate() {
+        return hiredDate;
+    }
+
+    public void setHiredDate(String hiredDate) {
+        this.hiredDate = hiredDate;
+    }
+
+    public String cutCheck(){double x = getQuantity() * getPrice(); return "Paid Supplier: " + x;}
 }

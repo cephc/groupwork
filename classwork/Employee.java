@@ -1,6 +1,7 @@
-package classwork;
+package groupwork.classwork;
 
-public abstract class Employee {
+public abstract class Employee implements IPayable{
+
     private String firstName;
     private String lastName;
     private int socialSecurity;
@@ -34,5 +35,7 @@ public abstract class Employee {
     public void setSocialSecurity(int socialSecurity){
         this.socialSecurity = socialSecurity;
     }
+
+    public abstract String cutCheck();
 
 }
