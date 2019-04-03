@@ -17,6 +17,10 @@ public class HourlyEmployee extends Employee {
     public String calculatePay(){
         double payRate = getHoursWorked() * getHourlyWage();
         double newPayRate = Math.round(payRate*100.00)/100.00;
+        if(getHoursWorked() > 40){
+            double overtimeHours = getHoursWorked() - 40;
+            newPayRate = (40 * getHourlyWage()) + (overtimeHours * getHourlyWage());
+        }
         return "Employee type: Hourly Employee" + "\n" + "First Name: " + getFirstName() + "\n" + "Last Name: " + getLastName() + "\n" + "Hired Date: " + getHiredDate() + "\n" + "Earned: " + newPayRate;
     }
     //getters

@@ -3,7 +3,7 @@ package classwork;
 public class Main {
     public static void main(String[] args) {
 
-        HourlyEmployee one = new HourlyEmployee("Danielle", "Johnson", 220987336, 8.75, 35.09,  "12/02/1998");
+        HourlyEmployee one = new HourlyEmployee("Danielle", "Johnson", 220987336, 8.75, 50,  "12/02/1998");
         System.out.println(one.calculatePay());
         System.out.println("========================================================");
 
